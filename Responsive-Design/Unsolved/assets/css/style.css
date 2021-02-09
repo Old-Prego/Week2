@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex? 
+The text automatically word wraps
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property? 
+flex wrap makes sure that different objects within the flex-wrap: wrap designated container wrap around on the page and shift sizes when needed.
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+/* 
+What does the flex-shrink property specify?
+What is doing here? 
+Flex shrink makes sure that the assigned object doesn't shrink with the rest (0), shrinks at the same amount (1) or shrinks much faster than other flex objects.
+*/
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+Aligns all flex items within the container to the center of the container
+*/
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+What is it doing here? 
+the 0's are height and width(?) and the final parameter is alignment along the main axis
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+What is it doing here? 
+Changes the direction in which flex objects will stack.
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
